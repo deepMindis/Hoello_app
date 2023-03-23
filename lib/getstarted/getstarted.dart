@@ -34,9 +34,6 @@ class GetStated extends StatelessWidget {
                       borderRadius: BorderRadius.all(
                         Radius.circular(8.0),
                       ),
-                      boxShadow: <BoxShadow>[
-                        BoxShadow(offset: Offset(1.1, 1.1), blurRadius: 10.0),
-                      ],
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(
