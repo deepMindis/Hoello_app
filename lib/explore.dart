@@ -75,17 +75,17 @@ class Explore extends StatelessWidget {
           items: [
             Icon(
               Icons.home,
-              color: Colors.white,
+              color: Colors.deepOrange,
               size: 30,
             ),
             Icon(
               Icons.favorite,
-              color: Colors.white,
+              color: Colors.deepOrange,
               size: 30,
             ),
             Icon(
               Icons.settings,
-              color: Colors.white,
+              color: Colors.deepOrange,
               size: 30,
             ),
           ],
