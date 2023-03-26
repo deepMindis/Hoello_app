@@ -1,16 +1,11 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, must_be_immutable, non_constant_identifier_names, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, must_be_immutable, non_constant_identifier_names, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Trink extends StatefulWidget {
-  Trink({super.key});
+class ViewChoosedType extends StatelessWidget {
+  ViewChoosedType({super.key});
 
-  @override
-  State<Trink> createState() => _TrinkState();
-}
-
-class _TrinkState extends State<Trink> {
   //_________________________ variables ____________
   List Rooms = [
     {
@@ -56,7 +51,6 @@ class _TrinkState extends State<Trink> {
       'image': 'images/bookingbroccess/booking/singleroom.jpeg',
     },
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +61,7 @@ class _TrinkState extends State<Trink> {
             SystemUiOverlayStyle(statusBarIconBrightness: Brightness.light),
         backgroundColor: Colors.white,
         title: Text(
-          'Home',
+          'Single Rooms',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
@@ -98,15 +92,7 @@ class _TrinkState extends State<Trink> {
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          if (index == 0) {
-                            print('adam');
-                          } else {
-                            print('kamal');
-                          }
-                        });
-                      },
+                      onTap: () {},
                       child: Container(
                         width: double.infinity,
                         height: 150,

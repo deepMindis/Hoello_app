@@ -3,8 +3,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:testing/bookingbroccess/booking/booking.dart';
-import 'package:testing/bookingbroccess/booking/booking2.dart';
+import 'package:testing/bookingbroccess/booking/booking_new.dart';
+import 'package:testing/bookingbroccess/booking/booking_new2.dart';
+import 'package:testing/bookingbroccess/booking/booking_new3.dart';
+import 'package:testing/bookingbroccess/booking/booking_new4.dart';
 import 'package:testing/bookingbroccess/explore/dining.dart';
 import 'package:testing/bookingbroccess/explore/explore.dart';
 import 'package:testing/bookingbroccess/explore/meeting.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Meeting(),
+      home: Details(),
     );
   }
 }
