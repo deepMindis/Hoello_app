@@ -18,7 +18,7 @@ import 'package:testing/filterscreen/filterscreen.dart';
 import 'package:testing/getstarted/getstarted.dart';
 import 'package:testing/login.dart';
 import 'package:testing/onboarding/onboardingscreen.dart';
-import 'package:testing/payment/modules/screens/register_screeen.dart';
+import 'package:testing/payment/payment_screen.dart';
 import 'package:testing/signup/signup.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Details(),
+      home: Payment(),
     );
   }
 }
