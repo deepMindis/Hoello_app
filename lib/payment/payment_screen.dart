@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
+//___________________________________________________________________________________
+
+// _______________ go to -android/app/build.gradle - and set minSdkversion 21
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
 

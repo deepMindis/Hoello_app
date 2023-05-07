@@ -19,6 +19,8 @@ import 'package:testing/getstarted/getstarted.dart';
 import 'package:testing/login.dart';
 import 'package:testing/onboarding/onboardingscreen.dart';
 import 'package:testing/payment/payment_screen.dart';
+import 'package:testing/qr_code.dart/create_qr.dart';
+import 'package:testing/qr_code.dart/scan_qr.dart';
 import 'package:testing/signup/signup.dart';
 
 void main() {
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Payment(),
+      home: CreateScreen(),
     );
   }
 }

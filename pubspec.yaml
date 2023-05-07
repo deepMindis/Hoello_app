@@ -35,12 +35,12 @@ dependencies:
   dio: ^5.0.3
   flutter:
     sdk: flutter
+  flutter_barcode_scanner: ^2.0.0
+  barcode_widget: ^2.0.1
   flutter_bloc: ^8.1.2
   intl: ^0.18.0
-  smooth_page_indicator: ^1.0.0+2
   razorpay_flutter: ^1.2.7
-  
-
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
