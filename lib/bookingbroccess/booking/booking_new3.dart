@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,7 +9,7 @@ class RoomDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Color.fromARGB(255, 65, 19, 173),
+      backgroundColor: Color.fromARGB(255, 65, 19, 173),
       //_________________________________________ App Bar _________________________________
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle(
@@ -35,22 +35,29 @@ class RoomDetails extends StatelessWidget {
       ),
       //________________________________________________ Body _________________________
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //_________________________________ imamge ______________
-            Container(
-              width: double.infinity,
-              height: 220,
-              child: Image(
-                image: AssetImage(
-                    'images/bookingbroccess/booking/deulexroom.jpeg'),
-                fit: BoxFit.fitWidth,
+            ClipPath(
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(
+                          'images/bookingbroccess/booking/deulexroom.jpeg',
+                        ),
+                        fit: BoxFit.cover)),
+                //width: MediaQuery.of(context).size.width,
+                height: 200,
+                // child: Image(
+                // image: AssetImage(
+                //   'images/bookingbroccess/booking/deulexroom.jpeg'),
+                //),
               ),
+              clipper: CustomClipPath(),
             ),
-            // SizedBox(
-            // height: 40,
-            //),
+            //_________________________________ imamge ______________
+
             Container(
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 65, 19, 173),
@@ -205,4 +212,21 @@ class RoomDetails extends StatelessWidget {
       ),
     );
   }
+}
+
+class CustomClipPath extends CustomClipper<Path> {
+  //var radius = 1.0;
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    //path.lineTo(size.width / 2, size.height);
+    path.lineTo(0, size.height);
+    path.quadraticBezierTo(
+        size.width * .5, size.height - 50, size.width, size.height);
+    path.lineTo(size.width, 0);
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
