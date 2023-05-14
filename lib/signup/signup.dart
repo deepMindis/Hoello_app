@@ -1,20 +1,23 @@
 // ignore_for_file: must_be_immutable, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, body_might_complete_normally_nullable
 
+import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
-
+import 'package:uuid/uuid.dart';
+import 'package:uuid/uuid_util.dart';
 import 'package:testing/signup/component.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
-
+  var uuid = Uuid();
   //_______________________________________ variabels __________________________________________
-
   TextEditingController firstname = TextEditingController();
   TextEditingController lastname = TextEditingController();
   TextEditingController emailaddress = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController passwordagain = TextEditingController();
   TextEditingController phonenumber = TextEditingController();
+  TextEditingController persontype = TextEditingController();
+  TextEditingController code = TextEditingController();
 
   var formKey = GlobalKey<FormState>();
   //________________________________________________________________________________________________
@@ -144,6 +147,11 @@ class SignUp extends StatelessWidget {
                     suffix: Icons.phone,
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                //_________________________________________________________________________
+
                 //________________________________________________________________________
                 SizedBox(
                   height: 30,
@@ -156,7 +164,9 @@ class SignUp extends StatelessWidget {
                       color: Colors.deepOrange,
                       borderRadius: BorderRadius.circular(30)),
                   child: MaterialButton(
-                    onPressed: (() {}),
+                    onPressed: (() {
+                      print(generatecode(uuid.v1()));
+                    }),
                     child: Text(
                       "Sign Up",
                       style: TextStyle(
@@ -206,4 +216,12 @@ class SignUp extends StatelessWidget {
       ),
     );
   }
+}
+
+String generatecode(String code) {
+  BarcodeWidget(
+    data: code,
+    barcode: Barcode.qrCode(),
+  );
+  return code;
 }
