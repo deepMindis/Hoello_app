@@ -13,7 +13,6 @@ import 'package:testing/bookingbroccess/explore/meeting.dart';
 import 'package:testing/bookingbroccess/explore/overview.dart';
 import 'package:testing/bookingbroccess/explore/rooms.dart';
 import 'package:testing/bookingbroccess/start.dart';
-import 'package:testing/dfhdfh.dart';
 import 'package:testing/filterscreen/filterscreen.dart';
 import 'package:testing/getstarted/getstarted.dart';
 import 'package:testing/login.dart';
@@ -21,6 +20,7 @@ import 'package:testing/onboarding/onboardingscreen.dart';
 import 'package:testing/payment/payment_screen.dart';
 import 'package:testing/qr_code.dart/create_qr.dart';
 import 'package:testing/qr_code.dart/scan_qr.dart';
+import 'package:testing/room_details2.dart';
 
 import 'package:testing/signup/signup.dart';
 import 'package:testing/bookingbroccess/booking/new_room/try.dart';
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NewHome(),
+      home: RoomDetails2(),
     );
   }
 }

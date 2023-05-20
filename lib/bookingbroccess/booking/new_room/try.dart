@@ -2,7 +2,6 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:testing/dfhdfh.dart';
 import 'package:testing/bookingbroccess/booking/new_room/data.dart';
 import 'package:testing/bookingbroccess/booking/new_room/feature_item.dart';
 import 'package:testing/bookingbroccess/booking/new_room/recommend_item.dart';
@@ -15,6 +14,13 @@ class NewHome extends StatefulWidget {
 }
 
 class _NewHomeState extends State<NewHome> {
+  List<String> images = [
+    'images/bookingbroccess/booking/deulexroom.jpeg',
+    'images/bookingbroccess/booking/royalroom.jpeg',
+    'images/bookingbroccess/booking/singleroom.jpeg',
+    'images/bookingbroccess/booking/royalroom.jpeg',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
