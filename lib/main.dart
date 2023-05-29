@@ -7,6 +7,7 @@ import 'package:testing/bookingbroccess/booking/booking_new.dart';
 import 'package:testing/bookingbroccess/booking/booking_new2.dart';
 import 'package:testing/bookingbroccess/booking/booking_new3.dart';
 import 'package:testing/bookingbroccess/booking/booking_new4.dart';
+import 'package:testing/bookingbroccess/booking/confirmed.dart';
 import 'package:testing/bookingbroccess/explore/dining.dart';
 import 'package:testing/bookingbroccess/explore/explore.dart';
 import 'package:testing/bookingbroccess/explore/meeting.dart';
@@ -15,13 +16,13 @@ import 'package:testing/bookingbroccess/explore/rooms.dart';
 import 'package:testing/bookingbroccess/start.dart';
 import 'package:testing/filterscreen/filterscreen.dart';
 import 'package:testing/getstarted/getstarted.dart';
+import 'package:testing/hotel_services/all_services.dart';
 import 'package:testing/login.dart';
 import 'package:testing/onboarding/onboardingscreen.dart';
 import 'package:testing/payment/payment_screen.dart';
 import 'package:testing/qr_code.dart/create_qr.dart';
 import 'package:testing/qr_code.dart/scan_qr.dart';
 import 'package:testing/room_details2.dart';
-
 import 'package:testing/signup/signup.dart';
 import 'package:testing/bookingbroccess/booking/new_room/try.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RoomDetails2(),
+      home: AllServices(),
     );
   }
 }
